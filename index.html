@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C. R. Pranav Sankar — Cinematographer</title>
+<meta name="description" content="C. R. Pranav Sankar — cinematographer. Short films, college projects, brand commissions and portfolio reels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Anek+Tamil:wght@500;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230B0B0A%22/%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2213%22 fill=%22none%22 stroke=%22%23F2EDE4%22 stroke-width=%224%22/%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%224%22 fill=%22%23F2EDE4%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<nav class="sitenav fade-up" id="sitenav" aria-label="Main">
+  <button type="button" class="navlink" data-go="about" aria-current="true">About</button>
+  <button type="button" class="navlink" data-go="work" aria-current="false">Work</button>
+  <button type="button" class="navlink" data-go="gigs" aria-current="false">Gigs</button>
+  <button type="button" class="navlink" data-go="reels" aria-current="false">Reels</button>
+  <button type="button" class="navlink" data-go="contact" aria-current="false">Contact</button>
+</nav>
+
+<!-- ========================= 01 · ABOUT / HERO ========================= -->
+<header class="hero" id="about">
+  <div class="photo-in">
+    <div class="hero-layer" id="heroLayer">
+      <img class="frame-img" id="heroA" src="assets/img/hero-back.jpg" alt="Pranav from behind, filming with a camera on a Ronin gimbal">
+      <canvas class="frame-img" id="heroCanvas" role="img" aria-label="Pranav in side profile, framing a shot on the same gimbal, revealed where the cursor flows"></canvas>
+      <img id="heroB" src="assets/img/hero-side.jpg" alt="" hidden>
+    </div>
+  </div>
+  <div class="hero-shade-top" aria-hidden="true"></div>
+  <div class="hero-shade-bot" aria-hidden="true"></div>
+  <div class="lb lb-top" aria-hidden="true"></div>
+  <div class="lb lb-bot" aria-hidden="true"></div>
+
+  <div class="hud fade-up" aria-hidden="true">
+    <span style="display: flex; align-items: center; gap: 10px"><span class="dot blink"></span>REC <span style="opacity: .55">/</span> Cam A / 01</span>
+    <span id="timecode" style="font-variant-numeric: tabular-nums">TC 01:00:00:00</span>
+  </div>
+
+  <div class="hero-main">
+    <div style="display: flex; flex-direction: column; gap: clamp(14px, 1.6vw, 22px); min-width: 0; flex: 0 1 auto">
+      <p class="eyebrow fade-up" style="animation-delay: 1.35s"><span>(01)</span><span class="dash"></span>About me</p>
+      <p class="greet fade-up" lang="ta" style="animation-delay: 1.5s">வணக்கம் :)</p>
+      <h1 class="name">
+        <span class="line"><span style="animation-delay: 1.15s">C. R. Pranav</span></span>
+        <span class="line"><span class="outline" style="animation-delay: 1.3s">Sankar</span></span>
+      </h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: clamp(18px, 2vw, 26px); flex: 0 1 440px; min-width: 0">
+      <p class="hero-copy fade-up" style="animation-delay: 1.75s">I’m C. R. Pranav Sankar - a cinematographer who believes there’s a <em class="hl">story in every frame</em> and probably a few unnecessary close-ups along the way <span class="mono" style="font-size: .6em; letter-spacing: .08em; color: var(--soft)">lol</span></p>
+      <div class="fade-up" style="display: flex; flex-wrap: wrap; gap: 12px 14px; animation-delay: 2s">
+        <button type="button" class="btn btn-primary" data-go="work">See the work <span class="arw" aria-hidden="true">→</span></button>
+        <button type="button" class="btn btn-ghost" data-go="contact">Say <span lang="ta" style="font-family: 'Anek Tamil', sans-serif; font-size: 15px; letter-spacing: 0; text-transform: none">வணக்கம்</span> back</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ========================= 02 · PROJECTS ========================= -->
+<section class="section projects" id="work" aria-labelledby="projects-title">
+  <div class="wrap sec-head">
+    <div class="head-row" data-reveal>
+      <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+        <p class="eyebrow"><span>(02)</span><span class="dash"></span>Selected work</p>
+        <h2 class="big-title" id="projects-title" style="font-size: clamp(72px, 12vw, 200px)">Projects.</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 10px">
+        <p class="tagline">Short films &amp; college work</p>
+        <p class="meta">07 projects · 2025–2026</p>
+      </div>
+    </div>
+    <div class="rule" data-draw></div>
+  </div>
+  <div id="projectGroups" style="position: relative; z-index: 2; padding-top: clamp(40px, 4vw, 64px)"></div>
+  <div class="wrap" style="padding-bottom: clamp(16px, 2vw, 28px)">
+    <div class="foot-line"></div>
+    <div class="foot">
+      <span>Short films · College work</span>
+      <button type="button" class="textlink" data-go="gigs">Up next — Gigs <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 03 · GIGS ========================= -->
+<section class="section gigs" id="gigs" aria-labelledby="gigs-title">
+  <div class="wrap sec-head">
+    <div class="gigs-head" data-reveal>
+      <p class="eyebrow"><span>(03)</span><span class="dash"></span>Commissions</p>
+      <h2 class="big-title" id="gigs-title" style="font-size: clamp(72px, 11vw, 180px); letter-spacing: .01em">Gigs</h2>
+      <p class="tagline" style="font-size: clamp(24px, 2.2vw, 34px)">Where storefronts surrender to the lens.</p>
+      <p class="meta">Two clients · 2025 — 26</p>
+    </div>
+    <div class="rule" data-draw style="transform-origin: center"></div>
+  </div>
+
+  <div class="web-stage" id="webStage">
+    <svg class="web-svg" id="webSvg" aria-hidden="true"></svg>
+
+    <div class="web-half" id="webHalf0">
+      <article class="gig-card" id="gigCard0" data-url="https://www.instagram.com/reel/DST9eIyEfDq/" aria-labelledby="gig-1">
+        <div class="gig-media" style="background: radial-gradient(90% 80% at 30% 20%, #23211E 0%, #141412 55%, #0D0D0C 100%)">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span class="label" aria-hidden="true"><span class="dot" style="width: 6px; height: 6px"></span>Rolling · A-cam</span>
+          <span class="fmt" aria-hidden="true">16:9</span>
+          <div class="logo"><img src="assets/img/studio149.png" alt="Studio 149 logo" style="max-width: 300px"></div>
+        </div>
+        <div class="gig-body">
+          <p class="act"><span>Act I</span><i></i><span>MMXXV</span></p>
+          <h3 id="gig-1">Studio <em>149</em></h3>
+          <p class="desc">Helmed both camera and cutting room — sculpting raw footage into a luminous promotional piece.</p>
+          <ul class="chips" aria-label="Craft"><li>Cinematography</li><li>Post-production</li><li>Showcase</li></ul>
+          <button type="button" class="gig-link" data-open-gig="0" aria-haspopup="dialog">Roll the reels <span class="mono" style="color: var(--muted)">02</span> <span aria-hidden="true">↗</span></button>
+        </div>
+      </article>
+    </div>
+
+    <div class="web-half" id="webHalf1">
+      <article class="gig-card" id="gigCard1" data-url="https://www.instagram.com/reel/DfdvK3MTkA6/" aria-labelledby="gig-2">
+        <div class="gig-media" style="background: radial-gradient(90% 80% at 70% 20%, #23211E 0%, #141412 55%, #0D0D0C 100%)">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span class="label" aria-hidden="true"><span class="dot" style="width: 6px; height: 6px"></span>Live · B-unit</span>
+          <span class="fmt" aria-hidden="true">4K</span>
+          <div class="logo"><img src="assets/img/poonthari.png" alt="Poonthari logo" style="max-width: 330px"></div>
+        </div>
+        <div class="gig-body">
+          <p class="act"><span>Act II</span><i></i><span>MMXXVI</span></p>
+          <h3 id="gig-2">Poonthari <em>Silks</em></h3>
+          <p class="desc">Chased light across lustrous drapes, then stitched every take into a vivid, rhythmic advertisement.</p>
+          <ul class="chips" aria-label="Craft"><li>Lensing</li><li>Colour &amp; cut</li><li>Commercial</li></ul>
+          <button type="button" class="gig-link" data-open-gig="1" aria-haspopup="dialog">Screen all five <span class="mono" style="color: var(--muted)">05</span> <span aria-hidden="true">↗</span></button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top: clamp(8px, 1vw, 16px); padding-bottom: clamp(16px, 2vw, 28px)">
+    <div class="foot-line"></div>
+    <div class="foot">
+      <button type="button" class="textlink" data-go="work"><span aria-hidden="true">←</span> Projects</button>
+      <button type="button" class="textlink" data-go="reels">Up next — Reels <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 04 · REELS ========================= -->
+<section class="section reels" id="reels" aria-labelledby="reels-title">
+  <div class="wrap sec-head">
+    <div class="head-row" data-reveal>
+      <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+        <p class="eyebrow"><span>(04)</span><span class="dash"></span>Reels</p>
+        <h2 class="big-title" id="reels-title" style="font-size: clamp(64px, 10vw, 168px); line-height: .86">Portfolio<br><span class="outline">shoots.</span></h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 10px">
+        <p class="tagline">Spin, stop, press play.</p>
+        <p class="meta">03 reels · 2025</p>
+      </div>
+    </div>
+    <div class="rule" data-draw></div>
+  </div>
+
+  <div class="ring-stage" id="ringStage" aria-roledescription="carousel" aria-label="Portfolio shoot reels">
+    <div class="ring-floor" id="ringFloor" aria-hidden="true"></div>
+    <div class="ring" id="ring"></div>
+  </div>
+
+  <div class="ring-controls">
+    <button type="button" class="arrow" id="reelPrev" aria-label="Previous reel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </button>
+    <div class="counter" aria-live="polite">
+      <a id="reelInsta" href="#" target="_blank" rel="noopener" class="mono" style="display: inline-flex; align-items: center; min-height: 32px; text-decoration: none; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; border-bottom: 1px solid rgba(242,237,228,.35)">View on Instagram ↗</a>
+      <span class="mono" style="font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--soft)"><span id="reelNum" style="color: var(--cream)">01</span> / <span id="reelTotal">03</span></span>
+      <div class="dots" id="reelDots" aria-hidden="true"></div>
+    </div>
+    <button type="button" class="arrow" id="reelNext" aria-label="Next reel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </div>
+
+  <div class="wrap" style="padding-top: clamp(36px, 4vw, 56px); padding-bottom: clamp(16px, 2vw, 28px)">
+    <div class="foot-line"></div>
+    <div class="foot">
+      <span>Drag, swipe or use the arrows · tap the front reel for sound</span>
+      <button type="button" class="textlink" data-go="contact">Up next — Contact <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= 05 · CONTACT ========================= -->
+<section class="section contact" id="contact" aria-label="Contact">
+  <div class="wrap sec-head">
+    <div class="head-row" data-reveal>
+      <p class="eyebrow"><span>(05)</span><span class="dash"></span>Contact</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 4px">
+        <p class="tagline">Lights set. Lens primed. Action awaits.</p>
+        <p class="meta">Tap roll · meet the eye behind the frame</p>
+      </div>
+    </div>
+    <div class="rule" data-draw></div>
+  </div>
+
+  <div class="wrap" style="max-width: 1240px; padding-top: clamp(40px, 5vw, 72px)">
+    <!-- viewfinder -->
+    <div class="finder" id="finder">
+      <div class="vignette" aria-hidden="true"></div>
+      <i class="third" style="top: 33.333%; left: 0; right: 0; height: 1px"></i>
+      <i class="third" style="top: 66.666%; left: 0; right: 0; height: 1px"></i>
+      <i class="third" style="left: 33.333%; top: 0; bottom: 0; width: 1px"></i>
+      <i class="third" style="left: 66.666%; top: 0; bottom: 0; width: 1px"></i>
+      <div class="brackets" id="brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="finder-hud" aria-hidden="true">
+        <span style="display: flex; align-items: center; gap: 8px"><span class="dot" id="hudDot" style="opacity: .4"></span><span id="hudText">Standby</span></span>
+        <span style="color: var(--muted)">AF · Face detect</span>
+      </div>
+      <div class="reticle" id="reticle" aria-hidden="true">
+        <i style="top: 50%; left: -10px; width: 20px; height: 1px"></i>
+        <i style="top: 50%; right: -10px; width: 20px; height: 1px"></i>
+        <i style="left: 50%; top: -10px; width: 1px; height: 20px"></i>
+        <i style="left: 50%; bottom: -10px; width: 1px; height: 20px"></i>
+      </div>
+      <div class="finder-center">
+        <h2 class="cheese" id="cheese">Camera <span class="outline">rolling</span></h2>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px">
+          <button type="button" class="shutter-btn" id="shutterBtn" aria-label="Roll">
+            <span class="shutter-ring" aria-hidden="true"><span></span></span>
+            Roll
+          </button>
+        </div>
+        <p class="mono" id="camStatus" aria-live="polite" style="margin: 0; min-height: 20px; max-width: 46ch; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted)"></p>
+      </div>
+      <div class="blind top" id="blindTop" aria-hidden="true"></div>
+      <div class="blind bot" id="blindBot" aria-hidden="true"></div>
+    </div>
+
+    <!-- result -->
+    <div class="result" id="result" hidden>
+      <div class="stage" id="stage">
+      <div class="stage-film" aria-hidden="true">
+        <video id="stageVideo" src="assets/video/beach-loop.mp4" poster="assets/img/beach-loop.jpg" muted loop playsinline preload="none"></video>
+        <div class="stage-shade"></div>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span class="stage-tag"><span class="dot"></span>B-roll · Shoreline</span>
+      </div>
+      <figure class="polaroid" id="polaroid">
+        <div class="shot"><img id="photo" src="assets/img/pranav-rolling.jpg" alt="Pranav framing a jewellery shot beside a glowing light tube"></div>
+        <figcaption>
+          <span style="font-style: italic; font-size: 30px; line-height: 1">Take OK!</span>
+          <span class="mono" id="stamp" style="font-size: 11px; letter-spacing: .16em; color: #5E5A52"></span>
+        </figcaption>
+      </figure>
+      </div>
+      <div class="info" id="info">
+        <p style="margin: 0; font-size: clamp(21px, 1.8vw, 28px); line-height: 1.34; color: var(--paper)">I love playing with lights, foregrounds, shadows, angles, and perspectives to make ordinary things look <em lang="ta-Latn">konjam</em> extraordinary. So? Ready to chase good shots, experiment with visuals, and occasionally argue with a camera about why it isn’t capturing what I see in my head. Contact the belo(w)ed :)</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <button type="button" class="pill-btn" id="retake"><span aria-hidden="true">↺</span> Retake</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- always visible -->
+    <div class="reach-row" data-reveal>
+      <a class="reach" href="tel:+917904105548">
+        <small>Ring · tap to call</small>
+        <b style="font-size: clamp(36px, 4.4vw, 64px)">+91 79041 05548 <span class="arr" aria-hidden="true">↗</span></b>
+      </a>
+      <a class="reach" href="mailto:crpranavsankaroff@gmail.com">
+        <small>Write · tap to email</small>
+        <b class="mail" style="font-size: clamp(24px, 3vw, 44px)">crpranavsankaroff@gmail.com <span class="arr" aria-hidden="true">↗</span></b>
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top: clamp(48px, 5vw, 72px); padding-bottom: clamp(32px, 4vw, 48px)">
+    <div class="foot-line"></div>
+    <div class="foot">
+      <span>© 2026 C. R. Pranav Sankar · Cinematographer</span>
+      <button type="button" class="textlink" data-go="about">Back to the top <span aria-hidden="true">↑</span></button>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========================= DOP SHOWCASE (opens from "DOP in short films") ========================= -->
+<div class="dop" id="dop" role="dialog" aria-modal="true" aria-labelledby="dop-title" hidden>
+  <div class="dop-scroll" id="dopScroll">
+    <div class="dop-bar">
+      <nav class="dop-index" id="dopIndex" aria-label="Films"></nav>
+      <button type="button" class="pill-btn" id="dopClose">Close <span aria-hidden="true">✕</span></button>
+    </div>
+    <header class="wrap dop-head">
+      <div class="head-row">
+        <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+          <p class="eyebrow"><span>(02)</span><span class="dash"></span>DOP in short films</p>
+          <h2 class="big-title" id="dop-title" style="font-size: clamp(64px, 10vw, 168px); line-height: .86">Behind<br><span class="outline">the lens.</span></h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 10px">
+          <p class="tagline">Three films, framed from the inside.</p>
+          <p class="meta" id="dopCount"></p>
+        </div>
+      </div>
+      <div class="rule"></div>
+    </header>
+    <div id="dopFilms"></div>
+    <div class="dop-foot">
+      <div class="foot-line"></div>
+      <div class="foot">
+        <span>Stills · Director of photography</span>
+        <button type="button" class="textlink" id="dopBack"><span aria-hidden="true">←</span> Back to projects</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================= GIG PAGE (opens from a gig card) ========================= -->
+<div class="dop gigpage" id="gigPage" role="dialog" aria-modal="true" aria-labelledby="gp-title" hidden>
+  <div class="dop-scroll" id="gpScroll">
+    <div class="dop-bar">
+      <span class="mono" style="font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted)"><span id="gpRoot">Gigs</span> <span aria-hidden="true">/</span> <span id="gpCrumb" style="color: var(--cream)"></span></span>
+      <button type="button" class="pill-btn" id="gpClose">Close <span aria-hidden="true">✕</span></button>
+    </div>
+    <header class="wrap dop-head">
+      <div class="head-row">
+        <div style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+          <p class="eyebrow"><span id="gpNo">(03)</span><span class="dash"></span><span id="gpAct"></span></p>
+          <h2 class="big-title" id="gp-title" style="font-size: clamp(64px, 10vw, 168px); line-height: .86"></h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding-bottom: 10px; max-width: 34ch">
+          <img id="gpLogo" src="" alt="" style="width: 100%; max-width: 260px; height: auto">
+          <p class="tagline" id="gpDesc" style="font-size: clamp(22px, 1.9vw, 30px)"></p>
+          <p class="meta" id="gpMeta"></p>
+        </div>
+      </div>
+      <div class="rule"></div>
+    </header>
+    <div id="gpCyl"></div>
+    <div class="dop-foot" style="padding-top: clamp(36px, 4vw, 56px)">
+      <div class="foot-line"></div>
+      <div class="foot">
+        <span id="gpHint">Drag, swipe or use the arrows · tap the front reel for sound</span>
+        <button type="button" class="textlink" id="gpBack"><span aria-hidden="true">←</span> <span id="gpBackTxt">Back to gigs</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Still viewer" hidden>
+  <button type="button" class="pill-btn lb-close" id="lbClose">Close <span aria-hidden="true">✕</span></button>
+  <button type="button" class="arrow lb-btn lb-prev" id="lbPrev" aria-label="Previous still"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption><b id="lbTitle"></b><span id="lbCount"></span></figcaption>
+  </figure>
+  <button type="button" class="arrow lb-btn lb-next" id="lbNext" aria-label="Next still"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/gigs.js"></script>
+<script src="js/reels.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/dop.js"></script>
+<script src="js/gigpage.js"></script>
+</body>
+</html>
